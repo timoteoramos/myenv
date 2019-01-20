@@ -1,0 +1,14 @@
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Source global definitions
+[ -f /etc/bashrc ] && . /etc/bashrc
+
+# Powerline
+/usr/bin/powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+[[ $TERM == *256color ]] && . /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh || PS1='[\u@\h \W]\$ '
+
+alias ls='ls --color=auto'
+

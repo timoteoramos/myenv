@@ -1,0 +1,3 @@
+st.termname: st-256color
+st.font: Hack:pixelsize=12:antialias=true:autohint=true;
+st.borderpx: 0
