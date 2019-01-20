@@ -15,7 +15,7 @@ xbps-install -S font-hack-ttf socat python3-psutil python3-GitPython
 pip3 install python-hglib pyuv powerline-status
 
 echo "Qtile + other stuff"
-xbps-install -S libxcb-devel libffi-devel cairo-devel python3-dbus python3-xdg python3-mpd2 python3-iwlib python3-keyring xst scrot rofi slock xautolock xrdb
+xbps-install -S libxcb-devel libffi-devel cairo-devel python3-dbus python3-xdg python3-mpd2 python3-iwlib python3-keyring xst dunst dmenu scrot rofi slock xautolock xrdb
 pip3 install xcffib
 pip3 install cairocffi
 pip3 install qtile

@@ -3,13 +3,16 @@ SCRIPT_ROOT=$(cd `dirname "$0"` && pwd)
 
 # Setup directory structure
 mkdir -p ~/.vim/bundle
-mkdir -p ~/.config/{gtk-3.0,qtile,rofi}
+mkdir -p ~/.config/{dunst,gtk-3.0,qtile,rofi}
 mkdir -p ~/Imagens/screenshots
 
 # Vundle
 [ ! -e ~/.vim/bundle/Vundle.vim ] && git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Symbolic links
+rm -Rf ~/.config/dunst/*
+ln -s $SCRIPT_ROOT/dunst/dunstrc ~/.config/dunst/
+
 rm -Rf ~/.config/gtk-3.0/*
 ln -s $SCRIPT_ROOT/gtk/settings.ini ~/.config/gtk-3.0/
 
