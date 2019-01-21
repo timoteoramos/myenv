@@ -8,7 +8,7 @@ xbps-install -S xorg-minimal xorg-fonts xrandr qt5-styleplugins adwaita-icon-the
 [ ! -L /var/service/dbus ] && ln -s /etc/sv/dbus /var/service/
 
 echo "Development tools"
-xbps-install -S git subversion bzr mercurial cvs base-devel python3-Cython python3-devel python3-pip editorconfig
+xbps-install -S git subversion bzr mercurial cvs base-devel python3-Cython python3-devel python3-ipython python3-jupyter_ipywidgets python3-pip editorconfig
 
 echo "Powerline setup"
 xbps-install -S font-hack-ttf socat python3-psutil python3-GitPython

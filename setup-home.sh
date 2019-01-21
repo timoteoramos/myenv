@@ -4,6 +4,7 @@ SCRIPT_ROOT=$(cd `dirname "$0"` && pwd)
 # Setup directory structure
 mkdir -p ~/.vim/bundle
 mkdir -p ~/.config/{dunst,gtk-3.0,qtile,rofi}
+mkdir -p ~/.ipython/profile_default
 mkdir -p ~/Imagens/screenshots
 
 # Vundle
@@ -16,12 +17,17 @@ ln -s $SCRIPT_ROOT/dunst/dunstrc ~/.config/dunst/
 rm -Rf ~/.config/gtk-3.0/*
 ln -s $SCRIPT_ROOT/gtk/settings.ini ~/.config/gtk-3.0/
 
+rm -Rf ~/.config/ipython
+
 rm -Rf ~/.config/qtile/*
 ln -s $SCRIPT_ROOT/qtile/{autostart,config,groups,keys,layouts,misc,screens}.py ~/.config/qtile/
 ln -s $SCRIPT_ROOT/qtile/autostart.sh ~/.config/qtile/
 
 rm -Rf ~/.config/rofi/*
 ln -s $SCRIPT_ROOT/rofi/config ~/.config/rofi/
+
+rm -Rf ~/.ipython/profile_default/*
+ln -s $SCRIPT_ROOT/ipython/ipython_config.py ~/.ipython/profile_default/
 
 rm -Rf ~/.bashrc
 ln -s $SCRIPT_ROOT/bash/bashrc ~/.bashrc
